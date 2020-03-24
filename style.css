@@ -1,0 +1,426 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.welcome {
+  height: 70vh;
+  display: flex;
+  color: white;
+}
+
+.name-container {
+  width: 35%;
+  background: #092327;
+  position: relative;
+  padding: 30px 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.contact h1 {
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.contact a:hover {
+  color: #5eb1bf;
+}
+
+.name p {
+  font-size: 65px;
+  padding-top: 20px;
+  margin-bottom: 40px;
+}
+
+.about-container {
+  width: 65%;
+  background: rgba(41, 128, 185,.6);
+  position: relative;
+  max-height: 750px;
+  padding: 30px 0;
+}
+
+.info-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 80%;
+  height: 100%;
+  transform: translateY(-5%);
+}
+
+.about {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 80%;
+  height: 80%;
+}
+
+.about p {
+  padding: 25px;
+  font-size: 16px;
+}
+
+/***************** media for welcome section ***************/
+
+@media (max-width: 820px) {
+  .welcome {
+  flex-direction: column;
+  height: auto;
+  }
+
+ .name p {
+  font-size: 50px;
+  }
+
+ .contact h1 {
+  font-size: 18px;
+  }
+
+.name-container, .about-container {
+  width: 100%;
+  height: 400px;
+  }
+
+.name, .contact {
+  width: 100%;
+  padding: 25px;
+  }
+
+.info-wrapper {
+  height: 100%;
+  width: 90%;
+  }
+
+.about {
+  height: 100%;
+  width: 90%;
+  }
+
+.about p {
+  padding: 20px;
+  }
+
+.about-container {
+  height: 700px;
+  }
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (-webkit-device-pixel-ratio: 3) {
+  .about-container {
+    height: 620px;
+  }
+ }
+
+@media (max-width: 820px) and (orientation: landscape) {
+  .about-container {
+    height: 420px;
+  }
+
+  .name, .contact {
+    padding: 0 25px;
+    width: 100%;
+  }
+
+  .contact h1:nth-of-type(2) {
+    margin-bottom: 20px;
+  }
+
+  .welcome {
+    flex-direction: column;
+  }
+
+  .info-wrapper {
+    transform: translateY(0);
+  }
+
+  .name-container {
+    height: 300px;
+  }
+}
+
+/****************** works *******************/
+
+.title {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.works {
+  width: 100%;
+  background: rgba(129, 236, 236, .2);
+  padding: 5vh 0;
+} 
+
+.row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.text, .image {
+  width: 50%;
+  height: 350px;
+}
+
+.image {
+  position: relative;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.blog.img {
+  background: url(images/porto-blog2.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  max-width: 600px;
+  background-position: center;
+}
+
+.pret.img {
+  background: url(images/porto-pret.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 600px;
+}
+
+.list.img {
+  background: url(images/porto-list2.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.game.img {
+  background: url(images/porto-gra.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 600px;
+}
+
+.img {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
+}
+
+/************* buttons *************/
+
+.works-btns {
+  display: flex;
+  min-width: 40%;
+  justify-content: space-between;
+}
+
+.btn {
+  min-width: 80px;
+  min-height: 40px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  margin: 10px;
+  color: white;
+}
+
+.site {
+  background: #092327;
+}
+
+.code {
+  background: #5eb1bf;
+}
+
+.btn:hover {
+  transform: scale(1.01);
+  box-shadow: 0 6px 4px lightgrey;
+}
+
+.btn a {
+  text-decoration: none;
+  color: white;
+}
+
+/**************** media for works section ******************/ 
+
+@media (max-width: 820px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .text, .image {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .text {
+    width: 80%;
+    height: 200px;
+  }
+
+  .title {
+    max-width: 90%;
+  }
+
+  .pret.text {
+    order: -1;
+  }
+
+  .game.text {
+    order: -1;
+  }
+
+  .blog.img {
+    background-image: url(images/blog-mobile2.jpg);
+  }
+
+  .pret.img {
+    background-image: url(images/pret-mobile2.jpg);
+    background-position: center;
+  }
+
+  .game.img {
+    background-image: url(images/porto-gra-mobile.jpg);
+  }
+
+  .works-btns {
+    width: 80%;
+  }
+
+  .works {
+    padding-top: 0;
+    padding-bottom: 5vh;
+  }
+} 
+
+@media (max-width: 820px) and (orientation: landscape)  {
+  .text {
+    width: 40%;
+  }
+  
+  .image {
+    width: 40%;
+  }
+
+  .row {
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .pret.text {
+    order: 0;
+  }
+
+  .game.text {
+    order: 0;
+  }
+
+}
+
+/*********** media for ipad ***************/
+
+@media only screen 
+  and (min-device-width : 768px) 
+  and (max-device-width : 1024px) 
+  and (-webkit-device-pixel-ratio: 2) {
+  .about-container, .name-container {
+    height: 400px;
+  }
+
+  .text {
+    width: 40%;
+  }
+
+  .works-btns {
+    width: 100%;
+  }
+
+  .image {
+    width: 40%;
+  }
+
+  .row {
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .pret.text {
+    order: 0;
+  }
+
+  .game.text {
+    order: 0;
+  }
+}
+
+@media only screen 
+  and (min-device-width : 768px) 
+  and (max-device-width : 1024px) 
+  and (orientation : landscape) 
+  and (-webkit-device-pixel-ratio: 2){
+  .name-container {
+    width: 50%;
+  }
+  
+  .about-container, .name-container {
+    height: 100%;
+  }
+
+  .welcome {
+    height: 80vh;
+  }
+
+  .works-btns {
+    width: 50%;
+  }
+
+  .text {
+    width: 50%;
+  }
+
+  .pret.img {
+    background-image: url(images/pret-mobile2.jpg);
+  }
+
+  .game.img {
+    background-image: url(images/porto-gra-mobile.jpg);
+  }
+
+  .blog.img {
+    background-image: url(images/blog-mobile2.jpg);
+  }
+}
